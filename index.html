@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>X-Stadium GTAV Roleplay</title>
-
+    <link rel="shortcut icon" href="./image/logo-black-yellow.png" type="image/x-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -15,22 +15,23 @@
 </head>
 <body>
     <!-- NAVBAR  -->
-    <nav class="navbar navbar-expand-md navbar-custom sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-custom bg-dark sticky-top">
         <div class="container-fluid">
-            <!-- LOGO AND BUTTON  -->
-            <div class="navbar-header">
-                <a href="#" class="navbar-brand">
-                    <img src="./image/logo-nav.png" alt="" height="80px">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-            
-            <!-- NAVBAR ITEMS  -->
-            <div class="navbar-main collapse navbar-collapse" id="navbarResponsive">
-                <!-- LEFT SIDE  -->
-                <ul class="nav navbar-nav navbar-left">
+            <!--  Show this only on mobile to medium screens  -->
+            <a class="navbar-brand d-lg-none navbar-brand-mobile ml-2" href="#">
+                <img src="./image/logo-white-yellow.png" alt="">
+            </a>
+    
+            <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbarToggle"
+                aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!--  Use flexbox utility classes to change how the child elements are justified  -->
+            <div class="collapse navbar-collapse justify-content-between" id="navbarToggle">
+                
+                <!-- LEFT SIDE NAVBAR  -->
+                <ul class="navbar-nav navbar-left">
                     <li class="nav-item">
                         <a href="" class="nav-link active">Trang chủ</a>
                     </li>
@@ -41,8 +42,18 @@
                         <a href="" class="nav-link">Event</a>
                     </li>
                 </ul>
-                <!-- RIGHT SIDE  -->
-                <ul class="nav navbar-nav navbar-right">
+                <!-- END LEFT SIDE  -->
+    
+    
+                <!--   Show this only lg screens and up   -->
+                <!-- CENTER LOGO  -->
+                <a class="navbar-brand d-none d-lg-block navbar-brand-custom" href="#">
+                    <img src="./image/logo-nav.png" alt="">
+                </a>
+                <!-- END CENTER LOGO  -->
+                
+                <!-- RIGHT SIDE NAVBAR  -->
+                <ul class="navbar-nav navbar-right">
                     <li class="nav-item">
                         <a href="" class="nav-link">Shop xe</a>
                     </li class="nav-item">
@@ -54,14 +65,16 @@
                             <input type="text" class="form-control" placeholder="Tìm kiếm">
                             <div class="input-group-append">
                                 <button class="btn btn-secondary" type="button">
-                                <i class="fa fa-search"></i>
+                                    <i class="fa fa-search"></i>
                                 </button>
                             </div>
                         </div>
                     </li>
                 </ul>
+                <!-- END RIGHT SIDE  -->
+    
             </div>
-            <!-- END NAVBAR ITEMS -->
+            <!-- END CENTER LOGO AND BOTH SIDE  -->
         </div>
     </nav>
     <!-- END NAVBAR  -->
@@ -70,51 +83,63 @@
     <div id="demo" class="carousel slide" data-ride="carousel">
         <!-- THE SLIDESHOW -->
         <div class="carousel-inner">
+            <!-- BACKGROUND AND CONTENT  -->
             <div class="carousel-item active">
                 <img src="./image/background-1.png" alt="Los Angeles">
-                <div class="carousel-caption">
+                <div class="carousel-caption img-1">
                     <img src="./image/logo-1.png" alt="">
                 </div>
             </div>
-            <div class="carousel-item" id="bg1">
+            <div class="carousel-item">
                 <img src="./image/background-2.png" alt="Chicago">
-                <div class="carousel-caption">
+                <div class="carousel-caption img-container">
                     <img src="./image/logo-2.png" alt="">
                 </div>
             </div>
-            <div class="carousel-item" id="bg2">
+            <div class="carousel-item">
                 <img src="./image/background-3.png" alt="New York">
-                <div class="carousel-caption">
+                <div class="carousel-caption img-container">
                     <img src="./image/logo-3.png" alt="">
                 </div>
             </div>
-            <div class="container-fluid footer-container">
-                <div class="footer-header">
-                    <a target="_blank" href="https://servers.fivem.net/servers/detail/64vqd7">
-                        <img src="./image/play-game.png" alt="">
-                    </a>
-                    <div class="row footer-link">
-                        <div class="col-xs-12 col-sm-6 col-md-4">
+            <!-- END CONTENT  -->
+
+            <!-- LINK AND PLAY BUTTON  -->
+            <div class="container-fluid carousel-bottom">
+                <div class="carousel-bottom-container">
+                    <!-- PLAY BUTTON  -->
+                    <div class="row play-button">
+                        <div class="col-lg-12 col-xs-12">
+                            <a target="_blank" href="https://servers.fivem.net/servers/detail/64vqd7">
+                                <img src="./image/play-game.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- LINK SECTION  -->
+                    <div class="row link-container">
+                        <div class="col-lg-4 col-12">
                             <a href="">
-                                <img src="./image/icon-facebook.png" alt="">
+                                <img src="./image/icon-facebook-32.png" alt="">
                                 Facebook
                             </a>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="col-lg-4 col-xs-12">
                             <a href="">
-                                <img src="./image/icon-discord.png" alt="">
+                                <img src="./image/icon-discord-32.png" alt="">
                                 Discord
                             </a>
                         </div>
-                        <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="col-lg-4 col-xs-12">
                             <a href="">
-                                <img src="./image/icon-youtube.png" alt="">
+                                <img src="./image/icon-youtube-32.png" alt="">
                                 Youtube
                             </a>
                         </div>
                     </div>
                 </div>
+                <!-- END ROW  -->
             </div>
+            <!-- END LINK AND PLAY BTN SECTION  -->
         </div>
         <!-- END SLIDESHOW -->
       
@@ -125,35 +150,10 @@
         <a class="carousel-control-next" href="#demo" data-slide="next">
           <span class="carousel-control-next-icon"></span>
         </a>
+        END CONTROL
 
-        
     </div>
     <!-- END SLIDER  -->
-
-    <!-- <footer class="fixed-bottom">
-        <div class="container-fluid">
-            <div class="footer-header">
-                <a target="_blank" href="https://servers.fivem.net/servers/detail/64vqd7">
-                    <img src="./image/play-game.png" alt="">
-                </a>
-                <div class="footer-link">
-                    <a href="">
-                        <img src="./image/icon-facebook.png" alt="">
-                        Facebook
-                    </a>
-                    <a href="">
-                        <img src="./image/icon-discord.png" alt="">
-                        Discord
-                    </a>
-                    <a href="">
-                        <img src="./image/icon-youtube.png" alt="">
-                        Youtube
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer> -->
-
 
     <script type='text/javascript'>
         // carousel auto run 

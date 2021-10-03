@@ -15,22 +15,25 @@ html, body {
 }
 
 /* NAVBAR  */
-/* NAVBAR - general */
+/* NAVBAR - top border and padding */
 .navbar {
-    display: flex;
     padding: .8rem .8rem 3px;
     box-shadow: 0px 12px 0px #ff9c00 inset;
 }
 
-/* NAVBAR - background  */
+/* NAVBAR - custom background  */
 .navbar-custom {
     background: #000;
 }
 
 /* NAVBAR - items  */
+.navbar-nav {
+    flex-flow: row nowrap;
+}
+
 .navbar-nav li {
     height: 100%;
-    width: 200px;
+    width: 10vw;
     padding:0 20px;
     text-align: center;
 }
@@ -44,6 +47,7 @@ html, body {
     box-shadow: 0px 3px 0px #ff9c00;
 }
 
+/* NAVBAR - items text  */
 .navbar-nav li a{
     font-size: 120%;
     text-transform: uppercase;
@@ -54,6 +58,7 @@ html, body {
     color: #fff !important;
 }
 
+/* NAVBAR - home button  */
 .navbar-nav .active {
     box-shadow: 0px 3px 0px #ff9c00;
 }
@@ -83,44 +88,74 @@ html, body {
 }
 
 /* NAVBAR - center logo  */
-.navbar-brand {
+.navbar-brand-custom {
     transform: translateX(-50%);
-    left: 51%;
-    top:-40px;
+    left: 50%;
+    top:-60px;
     position: absolute;
+    width: auto;
+}
+
+.navbar-brand-custom {
+    padding: 0px;
 }
 
 /* NAVBAR - logo  */
-.navbar-brand img {
+.navbar-brand-custom img {
     height: 100%;
-    width: 75%;
+    width: auto;
     filter: drop-shadow(10px 7px 4px #000);
+    padding: 7px 14px;
 }
 
 /* NAVBAR - left and right section  */
-.navbar-left {
-    margin-right: auto;
-}
-
 .navbar-left li {
-    margin:10px 60px 0 0;
-}
-
-.navbar-right {
-    margin-left: auto;
+    margin:10px 10px 0 0;
 }
 
 .navbar-right li {
-    margin:10px 0 0 60px;
+    margin:10px 0 0 10px;
+}
+
+/* NAVBAR - mobile version */
+/* NAVBAR - mobile logo */
+.navbar-brand-mobile img {
+    width: 33%;
+}
+
+/* NAVBAR - menu button  */
+.navbar-toggler {
+    background-color: #ff9c00;
+}
+
+.navbar-toggler-icon {
+    background-image: url('./image/icon-menu.png');
+}
+
+/* NAVBAR - turn off outline */
+.navbar-toggler:focus {
+    outline: none;
 }
 
 /* CAROUSEL  */
-/* CAROUSEL - Darker image  */
-.carousel-inner > div > img{
+/* CARIUSEL - keep fullheight when resize window  */
+.carousel {
     width: 100%;
-    height: 80%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* CAROUSEL - Darker image  */
+.carousel .carousel-inner {
+    height: 100%;
+}
+
+.carousel-inner > div > img{
+    /* width: 100%;
+    height: 80%; */
     opacity: 0.5;
 }
+
 .carousel-inner {
     background: black;
 }
@@ -128,45 +163,74 @@ html, body {
 /* CAROUSE - center logo  */
 .carousel-caption {
     top: 40%;
-    transform: translateY(-20%);
+    transform: translateY(-50%);
 }
 
 .carousel-caption > img {
     height: 50%;
 }
 
-/* FOOTER  */
-.footer-container {
-    position: absolute;
-    bottom: 0;
-}
-
-.footer-header {
-    padding:0 30% 30px; 
-}
-
-.footer-header > a > img {
-    width: 30%;
+/* FIXED - caption img not center  */
+.img-container {
     display: flex;
-    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+/* FOOTER  */
+.carousel-bottom {
+    position: absolute;
+    bottom:10px;
+}
+
+/* FOOTER - container  */
+.carousel-bottom-container {
+    margin: auto;
+    padding: 10px 0;
+}
+
+/* FOOTER - play button  */
+.play-button {
+    height: -85vh;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+.play-button div {
+    width: 50%;
+    margin: auto;
+    padding: 10px 0;
+}
+
+.play-button div img {
+    display: block;
+    max-width: 50%;
+    width: 300px;
+    height: auto;
+    margin: auto;
     filter: drop-shadow(10px 7px 4px #000);
     transition: all 0.5s ease-in-out;
 }
 
-.footer-header > a > img:hover {
+.play-button img:hover {
     transform: scale(1.1);
 }
 
-.footer-link {
-    padding: 10px;
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
+/* FOOTER - links  */
+.link-container {
+    padding: 0 30%;
 }
 
-.footer-link > div > a {
+.link-container div {
+    text-align: center;
+    padding: 5px 0;
+}
+
+/* FOOTER - links text */
+.link-container div a{
     border-radius: 30px;
-    padding: 0;;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -176,48 +240,112 @@ html, body {
     font-family: 'svn-avoregular', sans-serif;
     font-style: italic;
     font-weight: bold;
-    letter-spacing: 0.8mm;
+    letter-spacing: 0.6mm;
     transition: all 0.5s ease-in-out;
 }
 
-.footer-link a:hover {
-    transform: scale(1.2);
+/* FOOTER - links effects */
+.link-container div a:hover {
+    transform: scale(1.1);
 }
 
-.footer-link > div > a > img {
-    width: 20%;
+.link-container div img {
     margin-right: 5px;
+    transition: transform .7s ease-in-out;
 }
 
+.link-container div a:hover > img {
+    transform: rotate(360deg);
+}
 
 
 /* MEDIA QUERIES  */
+@media (max-width: 1200px) {
+    
+}
+
 @media (max-width: 992px) {
-    .navbar-brand {
-        top:-40px;
+    .navbar-brand-custom img {
+        /* width: auto; */
+        display: none;
     }
-    .navbar-brand img {
-        width: 70%;
+
+    .navbar-nav li {
+        width: 100%;
+        text-align: right;
+    }
+
+    .navbar-right li, .navbar-left li {
+        margin:0;
+    }
+
+    .collapse {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-bottom: 5px;
+    }
+
+    .collapse .navbar-nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carousel-caption {
+        top: 50%;
+        transform: translateY(-70%);
+        
+    }
+    
+    .carousel-caption > img {
+        height: 35%;
+    }
+
+    /* FOOTER - play btn  */
+    .play-button img {
+        height: 50%;
+        margin-top: 50px;
+    }
+
+    /* FOOTER - link section   */
+    .link-container div a {
+        font-size: 13px;
+    }
+    .link-container div a img {
+        display: none;
     }
 }
 
 @media (max-width: 768px) {
-    .navbar-brand {
-        position: relative;
+    .carousel-caption {
+        top: 50%;
+        transform: translateY(-90%);
     }
-    .navbar-brand img {
-        width: 60%;
+    
+    .carousel-caption > img {
+        height: 20%;
+    }
+
+    /* FOOTER - play btn  */
+    .play-button img {
+        height: 35%;
+    }
+
+    .img-1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .img-1 > img {
+        margin-top: 30%;
     }
 }
 
-@media (max-width: 576) {
-    .navbar-brand {
-        transform: translateX(-50%);
-        left: 50%;
-        top:30px;
-    }
-    .navbar-brand img {
-        width: 45%;
+@media (max-width: 576px) {
+    /* FOOTER - play btn  */
+    .play-button img {
+        height: 20%;
     }
 }
+
 
