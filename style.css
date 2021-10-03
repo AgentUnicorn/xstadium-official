@@ -140,8 +140,8 @@ html, body {
 /* CAROUSEL  */
 /* CARIUSEL - keep fullheight when resize window  */
 .carousel {
-    /* width: 100%;
-    height: 100vh; */
+    /* width: 100%; */
+    /* height: 50vh; */
     /* overflow: hidden; */
 }
 
@@ -150,14 +150,29 @@ html, body {
     /* height: 100%; */
 }
 
+/* .carousel-inner {
+    height: 50%;
+} */
+
+.carousel-item{
+    height: 93vh;
+    width: 100%;
+} 
+.carousel-item img{
+    height: 100%;
+    object-fit:cover;
+}
+
 .carousel-inner > div > img{
     width: 100%;
-    height: 80%;
-    opacity: 0.5;
+    height: 100%;
+}
+
+.dark > img {
+    filter: brightness(75%);
 }
 
 .carousel-inner {
-    background: black;
 }
 
 /* CAROUSE - center logo  */
@@ -167,7 +182,7 @@ html, body {
 }
 
 .carousel-caption > img {
-    height: 50%;
+    height: 60%;
 }
 
 /* FIXED - caption img not center  */
@@ -176,19 +191,23 @@ html, body {
     justify-content: center;
     align-items: center;
 }
-/* FOOTER  */
+
+#bg-1 {
+    height: 70%;
+}
+/* CAROUSEL BOTTOM  */
 .carousel-bottom {
     position: absolute;
     bottom:10px;
 }
 
-/* FOOTER - container  */
+/* CAROUSEL BOTTOM - container  */
 .carousel-bottom-container {
     margin: auto;
     padding: 10px 0;
 }
 
-/* FOOTER - play button  */
+/* CAROUSEL BOTTOM - play button  */
 .play-button {
     height: -85vh;
     display: flex;
@@ -217,7 +236,7 @@ html, body {
     transform: scale(1.1);
 }
 
-/* FOOTER - links  */
+/* CAROUSEL BOTTOM - links  */
 .link-container {
     padding: 0 30%;
 }
@@ -227,7 +246,7 @@ html, body {
     padding: 5px 0;
 }
 
-/* FOOTER - links text */
+/* CAROUSEL BOTTOM - links text */
 .link-container div a{
     border-radius: 30px;
     display: flex;
@@ -243,7 +262,7 @@ html, body {
     transition: all 0.5s ease-in-out;
 }
 
-/* FOOTER - links effects */
+/* CAROUSEL BOTTOM - links effects */
 .link-container div a:hover {
     transform: scale(1.1);
 }
@@ -304,13 +323,13 @@ html, body {
         height: 70%;
     }
 
-    /* FOOTER - play btn  */
+    /* CAROUSEL BOTTOM - play btn  */
     .play-button img {
         height: 50%;
         margin-top: 50px;
     }
 
-    /* FOOTER - link section   */
+    /* CAROUSEL BOTTOM - link section   */
     .link-container div a {
         font-size: 13px;
     }
@@ -325,7 +344,7 @@ html, body {
         transform: translateY(-90%);
     }
 
-    /* FOOTER - play btn  */
+    /* CAROUSEL BOTTOM - play btn  */
     .play-button img {
         height: 35%;
     }
@@ -336,7 +355,7 @@ html, body {
 }
 
 @media (max-width: 576px) {
-    /* FOOTER - play btn  */
+    /* CAROUSEL BOTTOM - play btn  */
     .play-button img {
         height: 20%;
     }
