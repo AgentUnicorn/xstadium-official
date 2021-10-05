@@ -1,17 +1,42 @@
 @font-face {
-    font-family: 'svn-avoregular';
-    src: url('./fonts/svn-avo-webfont.woff2') format('woff2'), 
-         url('./fonts/svn-avo-webfont.woff') format('woff'),
-         url('./fonts/svn-avo_italic-webfont.woff2') format('woff2'),
-         url('./fonts/svn-avo_bold_italic-webfont.woff') format('woff');
+    font-family: 'svn-avobold_italic';
+    src: url('svn-avo_bold_italic-webfont.woff2') format('woff2'),
+         url('svn-avo_bold_italic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'svn-avobold';
+    src: url('svn-avo_bold-webfont.woff2') format('woff2'),
+         url('svn-avo_bold-webfont.woff') format('woff');
+    font-weight: normal;
+     font-style: normal;
+}
+@font-face {
+    font-family: 'svn-avoitalic';
+    src: url('svn-avo_italic-webfont.woff2') format('woff2'),
+         url('svn-avo_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'svn-avoregular';
+    src: url('svn-avo-webfont.woff2') format('woff2'),
+         url('svn-avo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ==================================================================== */
 
 html, body {
     height: 100%;
     width: 100%;
     font-family: 'svn-avoregular', sans-serif;
+    /* scroll-behavior: smooth; */
+    background: #000;
+    color: #fff;
 }
 
 /* NAVBAR  */
@@ -33,8 +58,8 @@ html, body {
 
 .navbar-nav li {
     height: 100%;
-    width: 10vw;
-    padding:0 20px;
+    width: 12vw;
+    padding:0 10px;
     text-align: center;
 }
 
@@ -70,11 +95,13 @@ html, body {
 
 .navbar-nav .input-group {
     width: 100%;
+    padding: 3px 0;
+    align-items: center;
 }
 
 .navbar-nav .input-group input,
 .navbar-nav .input-group button {
-    border-radius: 50px;
+    border-radius: 20px;
 }
 
 .navbar-nav .input-group .btn-secondary {
@@ -91,9 +118,10 @@ html, body {
 .navbar-brand-custom {
     transform: translateX(-50%);
     left: 50%;
-    top:-60px;
+    top:-55px;
     position: absolute;
     width: auto;
+    filter: drop-shadow(2px 2px 3px #000);
 }
 
 .navbar-brand-custom {
@@ -103,18 +131,19 @@ html, body {
 /* NAVBAR - logo  */
 .navbar-brand-custom img {
     height: 100%;
-    width: auto;
-    filter: drop-shadow(10px 7px 4px #000);
-    padding: 7px 14px;
+    width: 80%;
+    margin-left: 10%;
+    filter: drop-shadow(2px 2px 3px #000);
+    padding: 7px 0;
 }
 
 /* NAVBAR - left and right section  */
 .navbar-left li {
-    margin:10px 10px 0 0;
+    margin:10px 0 0 ;
 }
 
 .navbar-right li {
-    margin:10px 0 0 10px;
+    margin:10px 0 0 0;
 }
 
 /* NAVBAR - mobile version */
@@ -198,7 +227,7 @@ html, body {
 /* CAROUSEL BOTTOM  */
 .carousel-bottom {
     position: absolute;
-    bottom:10px;
+    bottom:1.5em;
 }
 
 /* CAROUSEL BOTTOM - container  */
@@ -210,24 +239,22 @@ html, body {
 /* CAROUSEL BOTTOM - play button  */
 .play-button {
     height: -85vh;
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    margin-bottom: 10px;
+    margin-bottom: 0.5rem;
 }
 
 .play-button div {
-    width: 50%;
-    margin: auto;
+    display: flex;
+    justify-content: center;
     padding: 10px 0;
+    /* border: 1px solid green; */
 }
 
 .play-button div img {
-    display: block;
-    max-width: 50%;
-    width: 300px;
-    height: auto;
-    margin: auto;
+    /* display: block; */
+    max-width: 100%;
+    height: 80%;
+    width: auto\9;
+    width: auto;
     filter: drop-shadow(10px 7px 4px #000);
     transition: all 0.5s ease-in-out;
 }
@@ -277,6 +304,135 @@ html, body {
 }
 
 
+/* GUIDE  */
+/* GUIDE - Container  */
+.padding {
+    padding: 0 2rem;
+}
+
+.guide-container {
+    /* background: #000;
+    color: #fff; */
+    box-shadow: 0px 20px 0px #ff9c00 inset;
+    font-size: 20px;
+    font-family: 'svn-avoregular', sans-serif;
+    border-bottom: 20px solid #ff9c00;
+}
+
+/* GUIDE - badge  */
+.guide-badge {
+    position: relative;
+    top: 0px;
+    left: 12%;
+    width: 3%;
+    transform: translateX(-10%);
+    margin-left: 2rem;
+}
+
+/* GUIDE - Text img  */
+
+.guide-title > div, .guide-thanks > div {
+    display: flex;
+    justify-content: center;
+}
+
+.guide-title img, .guide-thanks img {
+    max-width: 80%;
+    height: auto;
+    width: auto;
+}
+
+.guide-thanks img {
+    margin-top: -30px;
+}
+/* GUIDE - Text  */
+.guide-text {
+    width: 75%;
+    margin: auto;
+}
+
+.guide-text h1 {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'svn-avobold', sans-serif;
+    padding: .5em;
+}
+
+.guide-text h1 span {
+    color: #ff9c00;
+}
+
+.guide-text ul li {
+    list-style: '- ';
+    margin-bottom: 1em;
+    line-height: 1.2;
+}
+
+/* GUIDE - text link  */
+.guide-text-link {
+    padding: 2rem;
+}
+
+.guide-text-link p {
+    margin-bottom: 0;
+}
+
+.guide-text-link p span {
+    font-weight: bold;
+}
+
+.guide-text-link p:last-child {
+    margin-top: 2rem;
+}
+
+.guide-text-link a {
+    /* text-decoration: none; */
+    color: #ff9c00;
+}
+
+/* GUIDE - Hr  */
+
+hr {
+    border-top: 7px solid #ff9c00;
+    width: 50%;
+}
+
+/* GUIDE - detail  */
+.guide-detail {
+    width: 50%;
+    margin: auto;
+    padding: 1em 0;
+}
+
+.guide-detail > div {
+    display: flex;
+    justify-content: center;
+}
+
+.guide-detail > div > img {
+    padding-bottom: 1.3em;
+    max-width: 100%;
+    /* IE7 */
+    height: auto\9; 
+    /* IE8 */
+    height: auto;
+}
+
+.guide-detail ul li {
+    list-style: url('./image/list-style.png');
+    margin-bottom: 1.2em;
+}
+
+.guide-detail ul li span {
+    color: #ff9c00;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #fff;
+}
+
 /* MEDIA QUERIES  */
 @media (max-width: 1200px) {
     
@@ -297,36 +453,41 @@ html, body {
         margin:0;
     }
 
-    .collapse {
+    .collapse-items {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
         padding-bottom: 5px;
     }
 
-    .collapse .navbar-nav {
+    .collapse-items .navbar-nav {
         display: flex;
         flex-direction: column;
     }
 
     .carousel-caption {
         top: 50%;
-        transform: translateY(-70%);
-        
+        transform: translateY(-70%); 
+    }
+
+    #bg-1 {
+        height: 70%;
     }
     
     #bg-2 {
-        height: 60%;
+        height: 45%;
     }
 
-    #bg-1, #bg-3 {
-        height: 70%;
-    }
-
-    /* CAROUSEL BOTTOM - play btn  */
-    .play-button img {
+    #bg-3 {
         height: 50%;
-        margin-top: 50px;
+    }
+
+    .guide-title img, .guide-thanks img {
+        /* display: none; */
+    }
+
+    .guide-badge {
+        visibility: hidden;
     }
 
     /* CAROUSEL BOTTOM - link section   */
@@ -344,20 +505,33 @@ html, body {
         transform: translateY(-90%);
     }
 
-    /* CAROUSEL BOTTOM - play btn  */
-    .play-button img {
+    #bg-1 {
+        height: 65%;
+        margin-top: 15%;
+    }
+
+    #bg-2 {
         height: 35%;
     }
 
     #bg-3 {
-        margin-top: 5%;
+        margin-top: 7%;
+        height: 45%;
     }
 }
 
 @media (max-width: 576px) {
-    /* CAROUSEL BOTTOM - play btn  */
-    .play-button img {
-        height: 20%;
+    #bg-1 {
+        height: 50%;
+        margin-top: 10%;
+    }
+
+    #bg-2 {
+        height: 30%;
+    }
+
+    #bg-3 {
+        height: 35%;
     }
 }
 
