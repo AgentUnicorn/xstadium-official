@@ -1,31 +1,19 @@
-@font-face {
-    font-family: 'svn-avobold_italic';
-    src: url('svn-avo_bold_italic-webfont.woff2') format('woff2'),
-         url('svn-avo_bold_italic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
 
 @font-face {
-    font-family: 'svn-avobold';
-    src: url('svn-avo_bold-webfont.woff2') format('woff2'),
-         url('svn-avo_bold-webfont.woff') format('woff');
-    font-weight: normal;
-     font-style: normal;
+    font-family: "SVN-Avoregular";
+    src: url("./fonts/SVN-AVO.TTF");
 }
 @font-face {
-    font-family: 'svn-avoitalic';
-    src: url('svn-avo_italic-webfont.woff2') format('woff2'),
-         url('svn-avo_italic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family: "SVN-Avoitalic";
+    src: url("./fonts/SVN-AVO_ITALIC.TTF");
 }
 @font-face {
-    font-family: 'svn-avoregular';
-    src: url('svn-avo-webfont.woff2') format('woff2'),
-         url('svn-avo-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family: "SVN-Avobold";
+    src: url("./fonts/SVN-AVO_BOLD.TTF");
+}
+@font-face {
+    font-family: "SVN-Avobolditalic";
+    src: url("./fonts/SVN-AVO_BOLD_ITALIC.TTF");
 }
 
 /* ==================================================================== */
@@ -33,7 +21,8 @@
 html, body {
     height: 100%;
     width: 100%;
-    font-family: 'svn-avoregular', sans-serif;
+    /* font-family: 'svn-avoregular', sans-serif; */
+    /* font-family: "SVN-Avo"; */
     /* scroll-behavior: smooth; */
     background: #000;
     color: #fff;
@@ -282,7 +271,8 @@ html, body {
     font-size: 15px;
     text-decoration: none;
     color: #fff;
-    font-family: 'svn-avoregular', sans-serif;
+    /* font-family: 'svn-avoregular', sans-serif; */
+    font-family: "SVN-Avobolditalic";
     font-style: italic;
     font-weight: bold;
     letter-spacing: 0.6mm;
@@ -313,10 +303,11 @@ html, body {
 .guide-container {
     /* background: #000;
     color: #fff; */
-    box-shadow: 0px 20px 0px #ff9c00 inset;
+    box-shadow: 0px 20px 0px #ffae00 inset;
     font-size: 20px;
-    font-family: 'svn-avoregular', sans-serif;
-    border-bottom: 20px solid #ff9c00;
+    /* font-family: 'svn-avoregular', sans-serif; */
+    font-family: "SVN-Avoregular";
+    border-bottom: 20px solid #ffae00;
 }
 
 /* GUIDE - badge  */
@@ -355,12 +346,13 @@ html, body {
     font-weight: bold;
     font-size: 30px;
     text-align: center;
-    font-family: 'svn-avobold', sans-serif;
+    /* font-family: 'svn-avobold', sans-serif; */
+    font-family: "SVN-Avobold";
     padding: .5em;
 }
 
 .guide-text h1 span {
-    color: #ff9c00;
+    color: #ffae00;
 }
 
 .guide-text ul li {
@@ -388,14 +380,17 @@ html, body {
 
 .guide-text-link a {
     /* text-decoration: none; */
-    color: #ff9c00;
+    color: #ffae00;
 }
 
 /* GUIDE - Hr  */
 
 hr {
-    border-top: 7px solid #ff9c00;
+    /* border-top: 7px solid #ffae00; */
+    background-color: #ffae00;
     width: 50%;
+    margin: 5rem auto;
+    padding: 4px 0;
 }
 
 /* GUIDE - detail  */
@@ -425,7 +420,7 @@ hr {
 }
 
 .guide-detail ul li span {
-    color: #ff9c00;
+    color: #ffae00;
     font-weight: bold;
 }
 
