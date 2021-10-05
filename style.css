@@ -228,7 +228,7 @@ html, body {
 /* CAROUSEL BOTTOM - play button  */
 .play-button {
     height: -85vh;
-    margin-bottom: 0.5rem;
+    /* margin-bottom: 0.5rem; */
 }
 
 .play-button div {
@@ -338,11 +338,12 @@ html, body {
 }
 /* GUIDE - Text  */
 .guide-text {
-    width: 75%;
+    width: 75vw;
     margin: auto;
+    border: 1px solid white;
 }
 
-.guide-text h1 {
+.guide-text h3 {
     font-weight: bold;
     font-size: 30px;
     text-align: center;
@@ -351,7 +352,7 @@ html, body {
     padding: .5em;
 }
 
-.guide-text h1 span {
+.guide-text h3 span {
     color: #ffae00;
 }
 
@@ -359,6 +360,7 @@ html, body {
     list-style: '- ';
     margin-bottom: 1em;
     line-height: 1.2;
+    font-size: 20px;
 }
 
 /* GUIDE - text link  */
@@ -389,15 +391,16 @@ hr {
     /* border-top: 7px solid #ffae00; */
     background-color: #ffae00;
     width: 50%;
-    margin: 5rem auto;
+    margin: 5% auto;
     padding: 4px 0;
 }
 
 /* GUIDE - detail  */
 .guide-detail {
-    width: 50%;
+    width: 60vw;
     margin: auto;
-    padding: 1em 0;
+    padding: 0.4em 0;
+    font-size: 20px;
 }
 
 .guide-detail > div {
@@ -412,6 +415,10 @@ hr {
     height: auto\9; 
     /* IE8 */
     height: auto;
+}
+
+.guide-detail ul {
+    margin-left: 5%;
 }
 
 .guide-detail ul li {
@@ -430,7 +437,9 @@ footer {
 
 /* MEDIA QUERIES  */
 @media (max-width: 1200px) {
-    
+    .guide-text h3 {
+        font-size: 3vh;
+    }
 }
 
 @media (max-width: 992px) {
@@ -500,6 +509,10 @@ footer {
         transform: translateY(-90%);
     }
 
+    .play-button div img {
+        height: 50%;
+    }
+
     #bg-1 {
         height: 65%;
         margin-top: 15%;
@@ -513,9 +526,35 @@ footer {
         margin-top: 7%;
         height: 45%;
     }
+
+    .guide-title img, .guide-thanks img {
+        display: none;
+    }
 }
 
 @media (max-width: 576px) {
+    .guide-text h3 {
+        font-size: 20px;
+    }
+
+    .guide-text ul li, .guide-text-link, .guide-detail {
+        font-size: 15px;
+    }
+
+    .guide-detail {
+        border: 1px solid white;
+    }
+
+    .guide-detail ul {
+        margin-left: -30px;
+    }
+
+    .guide-detail ul li {
+        list-style: '- ';
+        
+        list-style-position: inside;
+    }
+
     #bg-1 {
         height: 50%;
         margin-top: 10%;
